@@ -1,0 +1,16 @@
+<p>Componete Padre</p>
+
+<h2>Nombre del Park : {{title}}</h2>
+<ul>
+    <li>{{list}}</li>
+</ul>
+<p>Ingreo del Imput </p>
+
+<input type="text" [(ngModel)] = "titlePark"  (keyup)="mostrar()" >
+<p>Nombre del Parque : {{titlePark}}</p>
+<hr>
+<p>Componente Hijo </p>
+<div *ngIf="titlePark">
+    <app-parks [name]="titlePark"></app-parks>
+</div>
+
