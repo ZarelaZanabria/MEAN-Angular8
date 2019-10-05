@@ -8,9 +8,20 @@
 
 <input type="text" [(ngModel)] = "titlePark"  (keyup)="mostrar()" >
 <p>Nombre del Parque : {{titlePark}}</p>
+<h2>Object de parte del Hijo</h2>
+<div *ngIf="parkObject">
+  <ul>
+    <li>{{parkObject.name}}</li>
+    <li>{{parkObject.metro}}</li>
+    <li>{{parkObject.vegetation}}</li>
+    <li>{{parkObject.open}}</li>
+  </ul>
+</div>
+
 <hr>
 <p>Componente Hijo </p>
 <div *ngIf="titlePark">
-    <app-parks [name]="titlePark"></app-parks>
+    <app-parks [name]="titlePark"
+    (pasandoDatos)="verDatosPark($event) "></app-parks>
 </div>
 
