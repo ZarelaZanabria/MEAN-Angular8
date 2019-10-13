@@ -1,13 +1,33 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1> 
+<div class="navigation col-lg-12">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a [routerLink]="['/home']" class="navbar-brand">{{title}} </a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a [routerLink]="['/home']">Inicio</a></li>
+        <li><a [routerLink]="['/animals']">Animals</a></li>
+        <li> <a [routerLink]="['/keepers']">Keepers</a></li>
+        <li><a [routerLink]="['/store']">Store</a></li>
+        <li> <a [routerLink]="['/contact']">Contact</a></li>
+       </ul>
+
+    </div>
+
+
+
+  </nav>
+
 </div>
+
 <div>
-  <app-store></app-store>
+
+
+
+  <span *ngIf="emailContacto"><strong>Email de Contacto : </strong>{{emailContacto}}
+    <button (click)="borrarEmail()">Eliminar Email</button>
+  </span>
+
+  <router-outlet></router-outlet>
+
 </div>
-
-
-
-

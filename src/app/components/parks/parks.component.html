@@ -1,9 +1,9 @@
 <h1>Componest Parks</h1>
 <h2>{{name}}</h2>
 <ul>
-    <li>Metro : {{metro}}</li>
-    <li>Vegetación : {{vegetacion}}</li>
-    <span *ngIf="abierto!='true'">  Cerrado</span>
-    <span *ngIf="abierto=='false'">Abierto</span>
+  <li>Metro : {{metro}}</li>
+  <li>Vegetación : {{vegetacion}}</li>
+  <span *ngIf="abierto!='true'"> Cerrado</span>
+  <span *ngIf="abierto=='false'">Abierto</span>
 </ul>
-<button type="button" (click)="sendInformation()" >Enviar Datos</button>
+<button type="button" (click)="sendInformation()">Enviar Datos</button>
